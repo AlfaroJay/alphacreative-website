@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions — AlphaCreative</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0C1F4A;
+      --navy-dark: #091739;
+      --gold: #F5B800;
+      --white: #FFFFFF;
+      --off-white: #F6F8FC;
+      --border: #DDE3EF;
+      --text-primary: #0C1F4A;
+      --text-secondary: #4A5A7A;
+      --text-muted: #8A96B2;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-primary);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    /* NAV */
+    .navbar {
+      background: var(--navy-dark);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 32px;
+    }
+    .navbar-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .navbar-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px; font-weight: 700;
+      color: var(--white); text-decoration: none;
+    }
+    .navbar-logo em { color: var(--gold); font-style: normal; }
+    .navbar-back {
+      color: rgba(255,255,255,0.55); font-size: 13px; font-weight: 500;
+      text-decoration: none; transition: color 0.15s;
+    }
+    .navbar-back:hover { color: var(--white); }
+
+    /* HERO */
+    .page-hero {
+      background: var(--navy-dark);
+      padding: 80px 32px 64px;
+      border-bottom: 1px solid rgba(245,184,0,0.15);
+    }
+    .page-hero-inner { max-width: 800px; margin: 0 auto; }
+    .page-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+    }
+    .page-hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(28px, 4vw, 42px); font-weight: 700;
+      color: var(--white); line-height: 1.1; margin-bottom: 16px;
+    }
+    .page-hero .meta {
+      color: rgba(255,255,255,0.45); font-size: 14px;
+    }
+
+    /* CONTENT */
+    .content-wrap {
+      max-width: 800px; margin: 0 auto;
+      padding: 64px 32px 96px;
+    }
+
+    .disclaimer-box {
+      background: rgba(245,184,0,0.08);
+      border: 1px solid rgba(245,184,0,0.3);
+      border-left: 4px solid var(--gold);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin-bottom: 48px;
+    }
+    .disclaimer-box p {
+      font-size: 14px; font-weight: 500;
+      color: var(--text-primary); line-height: 1.6;
+    }
+    .disclaimer-box strong { color: var(--navy-dark); }
+
+    .section { margin-bottom: 48px; }
+    .section h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px; font-weight: 700;
+      color: var(--text-primary); margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section h2 span {
+      display: inline-block;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); margin-right: 10px; vertical-align: middle;
+    }
+    .section p {
+      font-size: 15px; line-height: 1.75;
+      color: var(--text-secondary); margin-bottom: 12px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul {
+      list-style: none; margin: 12px 0;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .section ul li {
+      font-size: 15px; color: var(--text-secondary);
+      line-height: 1.6; padding-left: 20px; position: relative;
+    }
+    .section ul li::before {
+      content: '→'; color: var(--gold);
+      position: absolute; left: 0; font-size: 11px; top: 3px;
+    }
+    .section strong { color: var(--text-primary); }
+
+    .warning-box {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--navy);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .warning-box p {
+      font-size: 14px; color: var(--text-secondary); line-height: 1.7;
+    }
+
+    /* FOOTER */
+    .page-footer {
+      background: var(--navy-dark);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 32px;
+      text-align: center;
+    }
+    .page-footer p {
+      color: rgba(255,255,255,0.3); font-size: 12px;
+    }
+    .page-footer a {
+      color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s;
+    }
+    .page-footer a:hover { color: var(--white); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-logo">Alpha<em>Creative</em></a>
+    <a href="index.html" class="navbar-back">← Back to site</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-label">Legal</div>
+    <h1>Terms &amp; Conditions</h1>
+    <p class="meta">Last updated: March 2026 &nbsp;·&nbsp; AlphaCreative LLC</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- IMPORTANT DISCLAIMER — MOST VISIBLE -->
+  <div class="disclaimer-box">
+    <p><strong>Important Notice — No Guarantee of Results:</strong> AlphaCreative provides strategic marketing, brand positioning, and paid acquisition services. While we apply proven frameworks and data-driven methodologies, <strong>we make no guarantee, representation, or warranty of any specific revenue outcomes, lead volumes, conversion rates, return on ad spend (ROAS), or business results.</strong> Marketing performance is influenced by many factors outside our control, including market conditions, competition, product quality, and client execution. Past results achieved for any client do not guarantee similar results for your business.</p>
+  </div>
+
+  <div class="section">
+    <h2><span>01</span>Agreement to Terms</h2>
+    <p>These Terms and Conditions ("Terms") constitute a legally binding agreement between you ("Client") and AlphaCreative LLC ("AlphaCreative," "we," "us," or "our"), governing your access to and use of our services, website located at thealphacreative.com, and any related content or deliverables.</p>
+    <p>By engaging our services, signing a proposal, making a payment, or accessing our website, you confirm that you have read, understood, and agree to be bound by these Terms. If you do not agree, do not use our services.</p>
+  </div>
+
+  <div class="section">
+    <h2><span>02</span>Services Provided</h2>
+    <p>AlphaCreative provides the following categories of services, subject to the scope defined in each individual project agreement or proposal:</p>
+    <ul>
+      <li>Brand strategy, positioning, and identity development</li>
+      <li>Website design, development, and conversion architecture</li>
+      <li>Paid media strategy and campaign management (Google, Meta, LinkedIn)</li>
+      <li>Search engine optimization (SEO) setup and monitoring</li>
+      <li>Analytics configuration and KPI dashboard development</li>
+      <li>Ongoing strategic growth advisory and retainer services</li>
+    </ul>
+    <p>The specific scope, deliverables, timelines, and fees for each engagement are defined in the applicable Statement of Work (SOW), proposal, or service agreement signed by both parties. These Terms apply to all engagements unless otherwise expressly modified in writing.</p>
+  </div>
+
+  <div class="section">
+    <h2><span>03</span>No Guarantee of Results</h2>
+    <p>This section is critically important. Please read it carefully.</p>
+
+    <div class="warning-box">
+      <p><strong>AlphaCreative does not guarantee any specific business outcomes.</strong> We do not guarantee specific revenue increases, lead generation volumes, website traffic levels, search engine rankings, ad performance metrics, return on investment (ROI), or any other measurable business result from our services.</p>
+    </div>
+
+    <p>Marketing and growth strategy involves inherent uncertainty. Results depend on numerous factors beyond AlphaCreative's control, including but not limited to:</p>
+    <ul>
+      <li>The quality, pricing, and competitiveness of your product or service offering</li>
+      <li>Market demand and economic conditions at the time of campaign execution</li>
+      <li>Advertising platform algorithm changes (Google, Meta, LinkedIn)</li>
+      <li>Competition within your target market and industry</li>
+      <li>Client responsiveness, follow-through, and internal execution capacity</li>
+      <li>Budget levels allocated to paid media campaigns</li>
+      <li>Client cooperation in providing timely feedback, approvals, and assets</li>
+      <li>The accuracy and completeness of information provided by the Client</li>
+    </ul>
+    <p>Any case studies, examples, or performance data referenced in our marketing materials represent outcomes achieved in prior engagements under specific conditions and are <strong>not representative of typical or expected results</strong> for any new client. Individual results will vary.</p>
+    <p>You acknowledge and agree that you are not engaging AlphaCreative based on any representation or expectation of guaranteed specific results.</p>
+  </div>
+
+  <div class="section">
+    <h2><span>04</span>Client Responsibilities</h2>
+    <p>To enable us to deliver our services effectively, the Client agrees to:</p>
+    <ul>
+      <li>Provide accurate, complete, and timely information, assets, and approvals as requested</li>
+      <li>Designate a primary point of contact authorized to make decisions</li>
+      <li>Respond to requests for feedback or approvals within agreed timelines</li>
+      <li>Grant necessary access to platforms, accounts, and tools required to perform the work</li>
+      <li>Ensure all content, materials, and information provided to AlphaCreative do not infringe third-party intellectual property rights</li>
+      <li>Allocate the agreed advertising budget to paid media campaigns as recommended</li>
+    </ul>
+    <p>Delays caused by the Client's failure to meet these responsibilities may impact timelines and deliverables. AlphaCreative is not liable for delays or diminished results attributable to Client inaction or unresponsiveness.</p>
+  </div>
+
+  <div class="section">
+    <h2><span>05</span>Payment Terms</h2>
+    <p>All fees are as outlined in the applicable proposal or service agreement. Unless otherwise specified:</p>
+    <ul>
+      <li>Project packages require a 50% deposit prior to commencement of work, with the remaining balance due upon project completion or at milestones defined in the SOW</li>
+      <li>Monthly retainer fees are due on the 1st of each month and are non-refundable once the service period has commenced</li>
+      <li>Invoices are payable within 14 days of issuance</li>
+      <li>Late payments are subject to a 1.5% monthly interest charge on outstanding balances</li>
+      <li>AlphaCreative reserves the right to pause or suspend services on accounts with overdue balances exceeding 14 days</li>
+    </ul>
+    <p>All fees are quoted in USD. Client is responsible for any applicable taxes, duties, or transaction fees associated with payments.</p>
+  </div>
+
+  <div class="section">
+    <h2><span>06</span>Refund Policy</h2>
+    <p>Due to the nature of strategic and creative services, AlphaCreative operates a limited refund policy:</p>
+    <ul>
+      <li>Deposits are non-refundable once work has commenced</li>
+      <li>Monthly retainer fees are non-refundable once a service period has begun</li>
+      <li>If AlphaCreative is unable to deliver agreed services due to our own failure, we will offer a prorated refund or service credit at our discretion</li>
+      <li>Refund requests must be submitted in writing within 7 days of the disputed invoice date</li>
+    </ul>
+    <p>We are committed to client satisfaction and will work in good faith to resolve any service concerns before a formal refund request is considered.</p>
+  </div>
+
+  <div class="section">
+    <h2><span>07</span>Intellectual Property</h2>
+    <p><strong>Client-owned materials:</strong> Upon receipt of full payment for a completed project, AlphaCreative assigns to the Client all rights, title, and interest in the final deliverables created specifically for that Client, including brand assets, website designs, and written content.</p>
+    <p><strong>AlphaCreative-owned materials:</strong> AlphaCreative retains ownership of all proprietary methodologies, frameworks, templates, processes, and tools used in delivering services. These are not transferred to the Client and may not be reproduced or shared without written consent.</p>
+    <p><strong>Third-party assets:</strong> Any third-party fonts, stock photography, software, or licensed assets incorporated into deliverables remain subject to their respective license terms. Client is responsible for maintaining applicable licenses after project completion.</p>
+    <p>AlphaCreative reserves the right to display completed work in our portfolio and marketing materials unless the Client requests confidentiality in writing.</p>
+  </div>
+
+  <div class="section">
+    <h2><span>08</span>Confidentiality</h2>
+    <p>Both parties agree to maintain the confidentiality of proprietary or sensitive information shared during the engagement. AlphaCreative will not disclose Client business information, strategies, financial data, or other confidential materials to third parties without written consent, except as required by law.</p>
+    <p>This obligation does not apply to information that is publicly available, independently developed, or already known to the receiving party prior to disclosure.</p>
+  </div>
+
+  <div class="section">
+    <h2><span>09</span>Use of Artificial Intelligence Tools</h2>
+
+    <div class="disclaimer-box">
+      <p><strong>Our AI Commitment:</strong> AlphaCreative uses AI tools to deliver sharper, faster, and more effective work. We will never sell your data, and we will never use your confidential business information to train or improve AI systems in a way that could benefit any other party.</p>
+    </div>
+
+    <p>AlphaCreative incorporates artificial intelligence tools and agents into our service delivery workflow. By engaging our services, you acknowledge and agree to the following:</p>
+    <ul>
+      <li><strong>AI-assisted delivery:</strong> Certain work products — including research, draft content, data analysis, campaign recommendations, and strategic documents — may be produced with the assistance of AI tools. All such work is reviewed and validated by a qualified AlphaCreative team member before delivery.</li>
+      <li><strong>Workflow improvement:</strong> AlphaCreative may use anonymized and aggregated learnings from client engagements to refine and improve our internal AI workflows and agents. This is done exclusively using de-identified, non-proprietary information. Your specific business data, financials, strategies, and client information are never used in identifiable form for this purpose.</li>
+      <li><strong>No data sales:</strong> AlphaCreative will never sell, license, or transfer your data to any AI platform, data broker, or third party for training, commercial resale, or any purpose unrelated to your engagement.</li>
+      <li><strong>Third-party AI platforms:</strong> We take reasonable steps to use enterprise or privacy-configured versions of third-party AI tools and to limit the submission of client-identifying information into any platform we do not control. Upon request, we will disclose which AI platforms were used in your engagement.</li>
+      <li><strong>Opt-out right:</strong> You may request in writing that your engagement be conducted without AI-assisted tools. We will accommodate such requests to the extent operationally feasible and will communicate any impact on scope, timelines, or deliverables.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2><span>10</span>Limitation of Liability</h2>
+    <p>To the maximum extent permitted by applicable law, AlphaCreative's total liability to the Client for any claim arising from or related to these Terms or our services shall not exceed the total fees paid by the Client to AlphaCreative in the three (3) months preceding the claim.</p>
+    <p>AlphaCreative shall not be liable for any indirect, incidental, consequential, special, or punitive damages, including but not limited to lost profits, lost revenue, loss of data, or loss of business opportunity, even if advised of the possibility of such damages.</p>
+    <p>AlphaCreative is not liable for the performance of third-party advertising platforms (Google, Meta, LinkedIn), changes to platform algorithms or policies, or outcomes resulting from Client decisions made independent of our recommendations.</p>
+  </div>
+
+  <div class="section">
+    <h2><span>11</span>Termination</h2>
+    <p>Either party may terminate an ongoing engagement with 30 days' written notice. Upon termination:</p>
+    <ul>
+      <li>The Client is responsible for all fees incurred up to the termination effective date</li>
+      <li>AlphaCreative will deliver all completed work product and transfer relevant account access within 14 days of termination</li>
+      <li>Any outstanding invoices become immediately due and payable</li>
+    </ul>
+    <p>AlphaCreative reserves the right to terminate services immediately and without notice if the Client engages in unlawful conduct, fails to pay outstanding invoices, or materially breaches these Terms.</p>
+  </div>
+
+  <div class="section">
+    <h2><span>12</span>Governing Law &amp; Dispute Resolution</h2>
+    <p>These Terms are governed by the laws of the State of Maryland, United States, without regard to conflict of law provisions. Any disputes arising under these Terms shall first be subject to good-faith negotiation between the parties.</p>
+    <p>If a dispute cannot be resolved through negotiation within 30 days, it shall be submitted to binding arbitration under the rules of the American Arbitration Association. The arbitration shall take place in Montgomery County, Maryland. Each party bears their own legal fees unless otherwise awarded by the arbitrator.</p>
+  </div>
+
+  <div class="section">
+    <h2><span>13</span>Modifications to These Terms</h2>
+    <p>AlphaCreative reserves the right to update these Terms at any time. Changes will be posted on our website with an updated effective date. Continued use of our services after changes are posted constitutes acceptance of the revised Terms. For active client engagements, material changes will be communicated directly.</p>
+  </div>
+
+  <div class="section">
+    <h2><span>14</span>Contact</h2>
+    <p>Questions about these Terms should be directed to:</p>
+    <p><strong>AlphaCreative LLC</strong><br />
+    Email: jose@thealphacreative.com<br />
+    Website: thealphacreative.com</p>
+  </div>
+
+</div>
+
+<footer class="page-footer">
+  <p>© 2026 AlphaCreative LLC. All rights reserved. &nbsp;·&nbsp;
+    <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+  </p>
+</footer>
+
+</body>
+</html>
