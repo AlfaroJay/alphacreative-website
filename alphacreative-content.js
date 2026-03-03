@@ -208,16 +208,16 @@ window.AC_CONTENT = {
       "We don't believe in vanity metrics. Every strategy, every campaign, every piece of content is tied to business outcomes. We take full responsibility for results—not just effort.",
   },
 
-  // ═══════════════════════════════════════════════════════════
+  // ═══════════════════════════════════════════
   // FINAL CTA
-  // ═══════════════════════════════════════════════════════════
+  // ═══════════════════════════════════════════
   finalCta: {
     heading: "Ready to Scale Your Business?",
     description:
       "Let's talk about your goals, timeline, and how we can help you grow.",
     button: {
       text: "Schedule a Call",
-      href: "https://calendly.com/alphacreative/discovery", // Update with your Calendly link
+      href: "https://secure.acuityscheduling.com/home.php",
     },
   },
 
@@ -230,7 +230,7 @@ window.AC_CONTENT = {
       { label: "Privacy Policy", href: "/privacy-policy" },
       { label: "Terms & Conditions", href: "/terms-and-conditions" },
       { label: "LinkedIn", href: "https://linkedin.com/company/alphacreative" },
-      { label: "Instagram", href: "https://instagram.com/alphacreative" },
+      { label: "Instagram", href: "https://instagram.com/the_alphacreative" },
     ],
   },
 
