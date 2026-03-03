@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlphaCreative — Growth Marketing & Brand Strategy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      background: white;
+    }
+
+    /* ═══════════════════════════════════════════ */
+    /* GLOBALS */
+    /* ═══════════════════════════════════════════ */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+    h1 { font-size: 56px; line-height: 1.2; }
+    h2 { font-size: 48px; margin-bottom: 16px; }
+    h3 { font-size: 20px; margin-bottom: 12px; }
+    p { line-height: 1.75; }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .btn-gold {
+      background: #f5b800;
+      color: #0c1f4a;
+    }
+
+    .btn-gold:hover {
+      background: #e8ac00;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(245,184,0,0.3);
+    }
+
+    /* ═══════════════════════════════════════════ */
+    /* NAVBAR */
+    /* ═══════════════════════════════════════════ */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(12, 31, 74, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(245,184,0,0.1);
+      padding: 16px 0;
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #f5b800;
+    }
+
+    .navbar-links {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+    }
+
+    .navbar-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .navbar-links a:hover {
+      color: #f5b800;
+    }
+
+    .navbar .btn { padding: 9px 20px; font-size: 13px; }
+
+    @media (max-width: 768px) {
+      .navbar-links { gap: 16px; font-size: 13px; }
+    }
+
+    /* ═══════════════════════════════════════════ */
+    /* HERO */
+    /* ═══════════════════════════════════════════ */
+    .hero {
+      background: linear-gradient(135deg, #0c1f4a 0%, #091739 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      margin-top: 68px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .hero canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .hero .subtext {
+      color: rgba(255,255,255,0.8);
+      font-size: 18px;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .hero-description {
+      color: rgba(255,255,255,0.7);
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+
+    .hero-eyebrow {
+      color: #f5b800;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .hero { min-height: 600px; margin-top: 68px; }
+      .hero h1 { font-size: 40px; }
+      .hero .subtext { font-size: 16px; }
+    }
+
+    /* ═══════════════════════════════════════════ */
+    /* POSITIONING STRIP */
+    /* ═══════════════════════════════════════════ */
+    #positioning-strip {
+      background: linear-gradient(135deg, #0c1f4a 0%, #091739 100%);
+      padding: 72px 20px;
+      border-bottom: 1px solid rgba(245,184,0,0.1);
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.5px;
+      word-spacing: 8px;
+    }
+
+    @media (max-width: 768px) {
+      #positioning-strip { padding: 48px 20px; font-size: 14px; }
+    }
+
+    /* ═══════════════════════════════════════════ */
+    /* SERVICES */
+    /* ═══════════════════════════════════════════ */
+    .what-we-do {
+      padding: 96px 0;
+      background: white;
+    }
+
+    .section-intro {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-intro h2 { color: #0c1f4a; }
+    .section-intro p { max-width: 640px; margin: 16px auto 0; font-size: 16px; color: #666; }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    .service-card {
+      padding: 32px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0;
+      width: 100%;
+      background: linear-gradient(135deg, rgba(245,184,0,0.08) 0%, transparent 100%);
+      transition: height 0.3s ease;
+      z-index: 0;
+    }
+
+    .service-card:hover {
+      border-color: #f5b800;
+      box-shadow: 0 12px 32px rgba(12,31,74,0.08);
+    }
+
+    .service-card:hover::before { height: 100%; }
+
+    .service-card-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-card h3 { color: #0c1f4a; position: relative; z-index: 1; }
+    .service-card p { font-size: 15px; color: #666; position: relative; z-index: 1; }
+
+    @media (max-width: 768px) {
+      .what-we-do { padding: 64px 0; }
+      .section-intro h2 { font-size: 36px; }
+      .service-grid { grid-template-columns: 1fr; gap: 24px; }
+      .service-card { padding: 24px; }
+    }
+
+    /* ═══════════════════════════════════════════ */
+    /* PACKAGES */
+    /* ═══════════════════════════════════════════ */
+    .packages {
+      padding: 96px 0;
+      background: linear-gradient(135deg, #0c1f4a 0%, #091739 100%);
+    }
+
+    .packages .section-intro h2,
+    .packages .section-intro p { color: white; }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    .pkg-card {
+      padding: 40px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pkg-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: linear-gradient(135deg, rgba(245,184,0,0.1) 0%, transparent 100%);
+      transition: height 0.3s ease;
+    }
+
+    .pkg-card:hover {
+      border-color: rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .pkg-card:hover::before { height: 100%; }
+
+    .pkg-card.featured {
+      border-color: #f5b800;
+      background: rgba(245,184,0,0.08);
+      transform: scale(1.05);
+    }
+
+    .pkg-card.featured::before { height: 100%; background: rgba(245,184,0,0.1); }
+
+    .pkg-badge {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: #f5b800;
+      color: #0c1f4a;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      z-index: 10;
+    }
+
+    .pkg-tier {
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .pkg-price {
+      font-size: 48px;
+      font-weight: 700;
+      color: #f5b800;
+      margin-bottom: 4px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .pkg-price sub { font-size: 18px; color: rgba(255,255,255,0.5); }
+
+    .pkg-description {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .pkg-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin: 24px 0;
+    }
+
+    .pkg-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .pkg-features li {
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .pkg-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #f5b800;
+      font-weight: 700;
+    }
+
+    .pkg-cta {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 12px 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .pkg-cta:hover {
+      border-color: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .pkg-card.featured .pkg-cta {
+      background: #f5b800;
+      color: #0c1f4a;
+      border-color: #f5b800;
+    }
+
+    .pkg-card.featured .pkg-cta:hover {
+      background: #e8ac00;
+      border-color: #e8ac00;
+    }
+
+    @media (max-width: 768px) {
+      .packages { padding: 64px 0; }
+      .pkg-card.featured { transform: scale(1); }
+    }
+
+    /* ═══════════════════════════════════════════ */
+    /* ABOUT */
+    /* ═══════════════════════════════════════════ */
+    .about {
+      padding: 96px 0;
+      background: #f9f9f9;
+    }
+
+    .about .section-intro h2 { color: #0c1f4a; }
+    .about .section-intro p { color: #666; }
+
+    .about-content { max-width: 800px; margin: 0 auto; }
+    .about-content h3 { color: #0c1f4a; margin: 32px 0 16px; }
+    .about-content p { color: #666; margin-bottom: 16px; }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin: 48px 0;
+      text-align: center;
+    }
+
+    .stat-val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: #0c1f4a;
+    }
+
+    .stat-val em { color: #f5b800; font-style: normal; }
+    .stat-lbl { font-size: 14px; color: #999; margin-top: 8px; }
+
+    @media (max-width: 768px) {
+      .about { padding: 64px 0; }
+      .about-stats { gap: 32px; }
+    }
+
+    /* ═══════════════════════════════════════════ */
+    /* FINAL CTA */
+    /* ═══════════════════════════════════════════ */
+    .final-cta {
+      padding: 96px 0;
+      background: linear-gradient(135deg, #0c1f4a 0%, #091739 100%);
+      text-align: center;
+    }
+
+    .final-cta h2 { color: white; margin-bottom: 20px; }
+    .final-cta p { color: rgba(255,255,255,0.8); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+    @media (max-width: 768px) {
+      .final-cta { padding: 64px 0; }
+      .final-cta h2 { font-size: 36px; }
+    }
+
+    /* ═══════════════════════════════════════════ */
+    /* FOOTER */
+    /* ═══════════════════════════════════════════ */
+    .footer {
+      background: #0a1a3a;
+      color: rgba(255,255,255,0.6);
+      padding: 48px 0;
+      font-size: 14px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+      gap: 32px;
+    }
+
+    .footer-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #f5b800;
+    }
+
+    .footer-nav {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+    }
+
+    .footer-nav a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover { color: white; }
+
+    .footer-copy {
+      text-align: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 12px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .footer-top { flex-direction: column; align-items: flex-start; }
+      .footer-nav { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-logo">α</div>
+    <ul class="navbar-links" id="navbar-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a href="#cta" class="btn btn-gold" id="navbar-cta">Schedule a Call</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <canvas id="hero-canvas"></canvas>
+  </div>
+  <div class="container">
+    <div class="hero-eyebrow">Creative Growth Strategy</div>
+    <h1 id="hero-heading">Cross-Channel Growth Strategy</h1>
+    <p class="subtext" id="hero-subheading">We turn creative ideas into measurable business results.</p>
+    <p class="hero-description" id="hero-description">From brand strategy to digital execution, we help growth-stage companies scale across all channels.</p>
+    <div class="hero-buttons">
+      <a href="#cta" class="btn btn-gold" id="hero-cta">Schedule a Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- POSITIONING STRIP -->
+<div id="positioning-strip">Brand Strategy · Content · Digital Ads · Growth Marketing · Analytics</div>
+
+<!-- SERVICES -->
+<section class="what-we-do" id="services">
+  <div class="container">
+    <div class="section-intro">
+      <h2 id="services-heading">What We Do</h2>
+      <p id="services-intro">We specialize in helping B2B and B2C companies scale across digital channels. Our integrated approach combines strategic thinking with tactical execution.</p>
+    </div>
+    <div class="service-grid" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages" id="packages">
+  <div class="container">
+    <div class="section-intro">
+      <h2 id="packages-heading">Packages</h2>
+      <p id="packages-intro">Choose the package that fits your stage and budget. All include monthly reporting and strategy reviews.</p>
+    </div>
+    <div class="packages-grid" id="packages-grid"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-intro">
+      <h2 id="about-heading">About AlphaCreative</h2>
+      <p id="about-intro">We're a growth marketing and creative agency built to help ambitious companies scale. Since 2018, we've worked with over 80 B2B and B2C brands to drive millions in revenue through integrated marketing strategies.</p>
+    </div>
+    <div class="about-stats" id="about-stats"></div>
+    <div class="about-content">
+      <h3>Our Approach</h3>
+      <p id="about-approach">We don't believe in vanity metrics. Every strategy, every campaign, every piece of content is tied to business outcomes. We take full responsibility for results—not just effort.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="cta">
+  <div class="container">
+    <h2 id="finalcta-heading">Ready to Scale Your Business?</h2>
+    <p id="finalcta-description">Let's talk about your goals, timeline, and how we can help you grow.</p>
+    <a href="#" class="btn btn-gold" id="finalcta-cta">Schedule a Call</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">α AlphaCreative</div>
+      <ul class="footer-nav" id="footer-nav">
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+        <li><a href="https://linkedin.com/company/alphacreative">LinkedIn</a></li>
+        <li><a href="https://instagram.com/alphacreative">Instagram</a></li>
+      </ul>
+    </div>
+    <p class="footer-copy" id="footer-copy">© 2026 AlphaCreative LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://raw.githubusercontent.com/AlfaroJay/alphacreative-website/main/alphacreative-content.js"></script>
+
+<script>
+(function() {
+  'use strict';
+
+  // ═══════════════════════════════════════════
+  // ELECTRON BOND PARTICLE SYSTEM
+  // ═══════════════════════════════════════════
+  const canvas = document.getElementById('hero-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let connections = [];
+    const CONNECTION_DISTANCE = 120;
+    const CONNECTION_DURATION = 1.5;
+
+    class Particle {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.vx = (Math.random() - 0.5) * 1.2;
+        this.vy = (Math.random() - 0.5) * 1.2;
+        this.radius = Math.random() * 2 + 1;
+        this.baseOpacity = Math.random() * 0.4 + 0.3;
+        this.opacity = this.baseOpacity;
+      }
+
+      update(width, height) {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x - this.radius < 0 || this.x + this.radius > width) {
+          this.vx *= -0.8;
+          this.x = Math.max(this.radius, Math.min(width - this.radius, this.x));
+        }
+        if (this.y - this.radius < 0 || this.y + this.radius > height) {
+          this.vy *= -0.8;
+          this.y = Math.max(this.radius, Math.min(height - this.radius, this.y));
+        }
+
+        this.vx *= 0.995;
+        this.vy *= 0.995;
+        this.opacity = this.baseOpacity + Math.sin(Date.now() * 0.002) * 0.1;
+      }
+
+      draw(ctx) {
+        ctx.fillStyle = `rgba(245, 184, 0, ${this.opacity})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = `rgba(245, 184, 0, ${this.opacity * 0.5})`;
+        ctx.lineWidth = 0.5;
+        ctx.stroke();
+      }
+
+      distanceTo(other) {
+        const dx = this.x - other.x;
+        const dy = this.y - other.y;
+        return Math.sqrt(dx * dx + dy * dy);
+      }
+    }
+
+    class Connection {
+      constructor(p1, p2) {
+        this.p1 = p1;
+        this.p2 = p2;
+        this.createdAt = Date.now();
+        this.progress = 0;
+      }
+
+      update() {
+        const elapsed = (Date.now() - this.createdAt) / 1000;
+        this.progress = Math.min(elapsed / CONNECTION_DURATION, 1);
+        return this.progress < 1;
+      }
+
+      draw(ctx) {
+        const opacity = (1 - this.progress) * 0.6;
+        ctx.strokeStyle = `rgba(245, 184, 0, ${opacity})`;
+        ctx.lineWidth = 1.5 * (1 - this.progress);
+        ctx.beginPath();
+        ctx.moveTo(this.p1.x, this.p1.y);
+        ctx.lineTo(this.p2.x, this.p2.y);
+        ctx.stroke();
+
+        const nodeSize = 1.5 * (1 - this.progress);
+        ctx.fillStyle = `rgba(245, 184, 0, ${opacity})`;
+        ctx.beginPath();
+        ctx.arc(this.p1.x, this.p1.y, nodeSize, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(this.p2.x, this.p2.y, nodeSize, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function resizeCanvas() {
+      const parent = canvas.parentElement;
+      canvas.width = parent.clientWidth;
+      canvas.height = parent.clientHeight;
+    }
+
+    function initParticles() {
+      particles = [];
+      const count = Math.floor((canvas.width * canvas.height) / 10000);
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle(Math.random() * canvas.width, Math.random() * canvas.height));
+      }
+    }
+
+    function checkConnections() {
+      connections = connections.filter(conn => conn.update());
+
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const distance = particles[i].distanceTo(particles[j]);
+
+          if (distance < CONNECTION_DISTANCE) {
+            const existing = connections.find(
+              conn =>
+                (conn.p1 === particles[i] && conn.p2 === particles[j]) ||
+                (conn.p1 === particles[j] && conn.p2 === particles[i])
+            );
+
+            if (!existing) {
+              connections.push(new Connection(particles[i], particles[j]));
+            }
+          }
+        }
+      }
+    }
+
+    function animate() {
+      ctx.fillStyle = 'rgba(12, 31, 74, 0.15)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach(p => {
+        p.update(canvas.width, canvas.height);
+        p.draw(ctx);
+      });
+
+      checkConnections();
+      connections.forEach(conn => conn.draw(ctx));
+
+      requestAnimationFrame(animate);
+    }
+
+    resizeCanvas();
+    initParticles();
+    animate();
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      initParticles();
+    });
+  }
+
+  // ═══════════════════════════════════════════
+  // POPULATE CONTENT FROM CONFIG
+  // ═══════════════════════════════════════════
+  function populateContent() {
+    if (typeof window.AC_CONTENT === 'undefined') {
+      setTimeout(populateContent, 100);
+      return;
+    }
+
+    const config = window.AC_CONTENT;
+
+    // Hero
+    if (config.hero) {
+      const hero = config.hero;
+      document.getElementById('hero-heading').textContent = hero.mainHeading;
+      document.getElementById('hero-subheading').textContent = hero.subheading;
+      document.getElementById('hero-description').textContent = hero.description;
+      document.getElementById('hero-cta').textContent = hero.ctaButton.text;
+      document.getElementById('hero-cta').href = hero.ctaButton.href;
+    }
+
+    // Navbar & Footer CTA
+    if (config.navbar) {
+      document.getElementById('navbar-cta').textContent = config.navbar.cta.text;
+      document.getElementById('navbar-cta').href = config.navbar.cta.href;
+    }
+
+    // Positioning
+    if (config.positioning) {
+      document.getElementById('positioning-strip').textContent = config.positioning.text;
+    }
+
+    // Services
+    if (config.services) {
+      const services = config.services;
+      document.getElementById('services-heading').textContent = services.heading;
+      document.getElementById('services-intro').textContent = services.intro;
+      const grid = document.getElementById('services-grid');
+      grid.innerHTML = services.services.map(s => `
+        <div class="service-card">
+          <span class="service-card-icon">${s.icon}</span>
+          <h3>${s.title}</h3>
+          <p>${s.description}</p>
+        </div>
+      `).join('');
+    }
+
+    // Packages
+    if (config.packages) {
+      const packages = config.packages;
+      document.getElementById('packages-heading').textContent = packages.heading;
+      document.getElementById('packages-intro').textContent = packages.intro;
+      const grid = document.getElementById('packages-grid');
+      grid.innerHTML = packages.packages.map((p, idx) => `
+        <div class="pkg-card${p.featured ? ' featured' : ''}">
+          ${p.featured ? '<div class="pkg-badge">Most Popular</div>' : ''}
+          <div class="pkg-tier">${p.name}</div>
+          <div class="pkg-price">${p.price}<sub>${p.period}</sub></div>
+          <p class="pkg-description">${p.description}</p>
+          <hr class="pkg-divider">
+          <ul class="pkg-features">
+            ${p.features.map(f => `<li>${f}</li>`).join('')}
+          </ul>
+          <a href="#cta" class="btn pkg-cta">${p.cta}</a>
+        </div>
+      `).join('');
+    }
+
+    // About
+    if (config.about) {
+      const about = config.about;
+      document.getElementById('about-heading').textContent = about.heading;
+      document.getElementById('about-intro').textContent = about.description;
+      document.getElementById('about-approach').textContent = about.approach;
+      const stats = document.getElementById('about-stats');
+      stats.innerHTML = about.stats.map(s => `
+        <div>
+          <div class="stat-val">${s.number}</div>
+          <div class="stat-lbl">${s.label}</div>
+        </div>
+      `).join('');
+    }
+
+    // Final CTA
+    if (config.finalCta) {
+      const cta = config.finalCta;
+      document.getElementById('finalcta-heading').textContent = cta.heading;
+      document.getElementById('finalcta-description').textContent = cta.description;
+      const btn = document.getElementById('finalcta-cta');
+      btn.textContent = cta.button.text;
+      btn.href = cta.button.href;
+    }
+
+    // Footer
+    if (config.footer) {
+      document.getElementById('footer-copy').textContent = config.footer.copyright;
+      const nav = document.getElementById('footer-nav');
+      nav.innerHTML = config.footer.links.map(l => `<li><a href="${l.href}">${l.label}</a></li>`).join('');
+    }
+  }
+
+  populateContent();
+})();
+</script>
+
+</body>
+</html>
