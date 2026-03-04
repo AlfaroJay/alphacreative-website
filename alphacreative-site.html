@@ -129,8 +129,9 @@
     .hero {
       background: var(--navy-dark);
       background-image: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(245,184,0,0.07) 0%, transparent 70%);
-      padding: calc(var(--s15) + 68px) 0 var(--s15);
+      padding: calc(var(--s8) + 68px) 0 var(--s8);
       text-align: center; position: relative; overflow: hidden;
+      min-height: 60vh;
     }
     .hero::after {
       content: '';
@@ -635,7 +636,7 @@
       <li><a href="#packages">Packages</a></li>
       <li><a href="#about">About</a></li>
     </ul>
-    <a href="#cta" class="btn btn-gold">Schedule a Call</a>
+    <a href="https://alphacreative.as.me/" class="btn btn-gold">Schedule a Call</a>
   </div>
 </nav>
 
@@ -647,7 +648,7 @@
     <h1 id="hero-heading">Cross-Channel <em>Growth Strategy</em></h1>
     <p class="subtext" id="hero-subheading">We turn creative ideas into measurable business results.</p>
     <div class="hero-buttons">
-      <a href="#cta" class="btn btn-gold" id="hero-cta">Schedule a Call</a>
+      <a href="https://alphacreative.as.me/" class="btn btn-gold" id="hero-cta">Schedule a Call</a>
       <a href="#services" class="btn btn-ghost-white">View Services</a>
     </div>
     <div class="hero-divider">
@@ -801,7 +802,7 @@
   <div class="container">
     <h2 data-reveal="up" id="finalcta-heading">Ready to Scale Your <em>Business</em>?</h2>
     <p data-reveal="up" data-delay="1" id="finalcta-description">Let's talk about your goals, timeline, and how we can help you grow.</p>
-    <a href="https://secure.acuityscheduling.com/home.php" class="btn btn-gold" data-reveal="up" data-delay="2" id="finalcta-cta">Schedule a Call</a>
+    <a href="https://alphacreative.as.me/" class="btn btn-gold" data-reveal="up" data-delay="2" id="finalcta-cta">Schedule a Call</a>
   </div>
 </section>
 
@@ -999,7 +1000,7 @@
 
   /* ── Button CTA Links ── */
   document.querySelectorAll('.pkg-cta, #navbar-cta, #finalcta-cta, .hero-buttons .btn-gold').forEach(btn => {
-    btn.href = 'https://secure.acuityscheduling.com/home.php';
+    btn.href = 'https://alphacreative.as.me/';
   });
 
   /* Init */
