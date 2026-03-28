@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0F1E3D;
+  --navy-mid: #1A2F54;
+  --navy-light: #243F6E;
+  --gold: #C9A84C;
+  --gold-light: #E2C472;
+  --gold-muted: #F5E9C8;
+  --cream: #FAF8F3;
+  --white: #FFFFFF;
+  --text-muted: #6B7A99;
+  --border: #DDE3F0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--navy);
+}
+
+.font-serif {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
